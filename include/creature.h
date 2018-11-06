@@ -2,8 +2,8 @@
 // Created by aknight on 8/5/18.
 //
 
-#ifndef CREATURE_CREATURE_H
-#define CREATURE_CREATURE_H
+#ifndef EX08_CREATURES_CREATURE_H
+#define EX08_CREATURES_CREATURE_H
 #include <cstdint>
 #include <string>
 
@@ -42,9 +42,12 @@ public:
     // Returns type of species
     virtual const std::string &getSpecies() const = 0;
 };
-
 }}}
 
 // Include your Human, Cyberdemon, Balrog and Elf declarations here.
+#include "human.h"
+#include "balrog.h"
+#include "cyberdemon.h"
+#include "elf.h"
 
-#endif //CREATURE_CREATURE_H
+#endif //EX08_CREATURES_CREATURE_H
