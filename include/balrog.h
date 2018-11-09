@@ -12,14 +12,23 @@
 #ifndef EX08_CREATURES_BALROG_H
 #define EX08_CREATURES_BALROG_H
 
-#include "demon.h"
+#include "creature.h"
 using namespace std;
 namespace edu { namespace sbcc { namespace cs140 {
     class Balrog : public Demon
     {
     public:
+        // Initialize to human, 10 strength, 10 hit points
+        Balrog( ): Demon( ) {}
+
+        // Initialize creature to new type, strength, hit points
+        // Also add appropriate accessor and mutator functions
+        // for type, strength, and hit points
+        Balrog(int newStrength, int newHit): Demon(newStrength, newHit),strength(newStrength) {}
+
+
         virtual int getDamage () const;
-        virtual const string getSpecies();
+        virtual const string &getSpecies() const;
 
     private:
         int strength;

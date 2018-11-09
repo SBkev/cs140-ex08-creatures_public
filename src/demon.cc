@@ -9,7 +9,7 @@
  * @keshields@pipeline.sbcc.edu
  */
 
-#include "demon.h"
+#include "creature.h"
 #include <iostream>
 using namespace std;
 

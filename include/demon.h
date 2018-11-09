@@ -18,8 +18,17 @@ namespace edu { namespace sbcc { namespace cs140 {
             class Demon : public Creature
             {
             public:
-                virtual int getDamage () const; //TODO: look at book for this
-                virtual const std::string &getSpecies() const = 0; //TODO: should const=0 be here? copied from Alan's parent class
+                // Initialize to human, 10 strength, 10 hit points
+                Demon( ): Creature( ) {}
+
+                // Initialize creature to new type, strength, hit points
+                // Also add appropriate accessor and mutator functions
+                // for type, strength, and hit points
+                Demon(int newStrength, int newHit): Creature(newStrength, newHit) {}
+
+
+                virtual int getDamage () const;
+                virtual const std::string &getSpecies() const = 0;
 
             private:
                 int strength;

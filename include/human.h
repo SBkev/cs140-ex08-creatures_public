@@ -18,7 +18,15 @@ namespace edu { namespace sbcc { namespace cs140 {
             class Human : public Creature
             {
             public:
-                virtual const std::string getSpecies();
+                // Initialize to human, 10 strength, 10 hit points
+                Human( ): Creature() {}
+
+                // Initialize creature to new type, strength, hit points
+                // Also add appropriate accessor and mutator functions
+                // for type, strength, and hit points
+                Human(int newStrength, int newHit): Creature(newStrength, newHit) {}
+
+                virtual const std::string &getSpecies() const;
 
             private:
                 int strength;

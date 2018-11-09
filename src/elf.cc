@@ -9,11 +9,13 @@
  * @keshields@pipeline.sbcc.edu
  */
 
-#include "elf.h"
+#include "creature.h"
 #include <iostream>
 using namespace std;
 
 namespace edu { namespace sbcc { namespace cs140 {
+            const static string NAME = "Elf";
+
             int Elf::getDamage() const {
                 //Elves inflict double magical damage with a 10% change
                 int damage = Creature::getDamage();
@@ -26,7 +28,7 @@ namespace edu { namespace sbcc { namespace cs140 {
                 return damage;
             }
 
-            const string Elf::getSpecies() {
-                return "Elf";
+            const string &Elf::getSpecies() const {
+                return NAME;
             }
         }}}

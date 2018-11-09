@@ -46,6 +46,7 @@ public:
 
 // Include your Human, Cyberdemon, Balrog and Elf declarations here.
 #include "human.h"
+#include "demon.h"
 #include "balrog.h"
 #include "cyberdemon.h"
 #include "elf.h"

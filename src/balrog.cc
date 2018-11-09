@@ -9,7 +9,7 @@
  * @keshields@pipeline.sbcc.edu
  */
 
-#include "balrog.h"
+#include "creature.h"
 #include <iostream>
 using namespace std;
 
@@ -22,9 +22,9 @@ namespace edu { namespace sbcc { namespace cs140 {
 
         damageTotal = damage + Demon::getDamage();
         return damageTotal;
-    }
-
-    const string Balrog::getSpecies() {
-        return "Balrog";
-    }
+    };
+    static const string NAME = "Balrog";
+    const string &Balrog::getSpecies() const{
+        return NAME;
+    };
 }}}

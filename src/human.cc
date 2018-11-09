@@ -9,12 +9,12 @@
  * @keshields@pipeline.sbcc.edu
  */
 
-#include "human.h"
+#include "creature.h"
 using namespace std;
 
 namespace edu { namespace sbcc { namespace cs140 {
-
-            const string Human::getSpecies() {
-                return "Human";
+            static const std::string NAME = "Human";
+            const string &Human::getSpecies() const {
+                return NAME;
             }
         }}}

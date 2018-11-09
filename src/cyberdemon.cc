@@ -9,16 +9,18 @@
  * @keshields@pipeline.sbcc.edu
  */
 
-#include "cyberdemon.h"
+#include "creature.h"
 #include <iostream>
 using namespace std;
 
 namespace edu { namespace sbcc { namespace cs140 {
+            const static string NAME = "Cyber Demon";
+
             int CyberDemon::getDamage() const {
                 return Demon::getDamage();
             }
 
-            const string CyberDemon::getSpecies() {
-                return "Cyberdemon";
+            const string &CyberDemon::getSpecies() const{
+                return NAME;
             }
         }}}
